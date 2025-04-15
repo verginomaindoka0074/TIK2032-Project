@@ -3,47 +3,93 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">    
   </head>
   <body>
       <!-- Navigation -->
-    <nav>
+    <nav id="sidebar">
       <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" onclick="closesb()" >Close X</a></li>
+      <li><a href="#home" onclick="closesb()" >Home</a></li>
+      <li><a href="#gallery" onclick="closesb()" >Gallery</a></li>
+      <li><a href="#blog" onclick="closesb()" >Blog</a></li>
+      <li><a href="#contact" onclick="closesb()" >Contact</a></li>
       </ul>
     </nav>
 
-        
+    <header id="top-bar">
+      <button id="sidebutton" onclick="opensb()">☰</button>
+      <h1 id="title">Personal Website</h1>
+    </header>       
+    
+
     <!-- Home Section -->
     <section id="home">
-      <h1>Welcome to our Website</h1>
+      <img src="assets/img/samratulangi.jpg" alt="sam ratulangi">
+      <h1>Sam Ratulangi University</h1>
     </section>
+    
 
-    <!-- Gallery Section -->
     <section id="gallery">
       <h2>Gallery</h2>
-      <!-- Two rows of three images each -->
-      <table border="0">
-        <tr>
-          <td><img src="assets/img/RealMadridLogo.jpg" alt="Real Madrid Logo" width="200"></td>
-          <td><img src="assets/img/StrawHats.jpg" alt="Mugiwara Pirates Jolly Roger" width="200"></td>
-          <td><img src="assets/img/AssassinsCreedOrigins.jpg" alt="Bayek on top of the great Pyramid" width="200"></td>
-        </tr>
-        <tr>
-          <td><img src="assets/img/SantiagoBernabeu.jpg" alt="Estadio Santiago Bernabeu" width="200"></td>
-          <td><img src="assets/img/BlackBeard.jpg" alt="Kurohige Pirates" width="200"></td>
-          <td><img src="assets/img/ShadowoftheCollosus.png" alt="Shadow of the Collosus" width="200"></td>
-        </tr>
-      </table>
+    
+      <section class="gallery-row">
+        <figure>
+          <img src="assets/img/RealMadridLogo.jpg" alt="Real Madrid Logo" width="200">
+          <figcaption>
+            <h3>Real Madrid</h3>
+            <p>The pride of Spanish football and UCL legends.</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/StrawHats.jpg" alt="Straw Hat Jolly Roger" width="200">
+          <figcaption>
+            <h3>Straw Hats</h3>
+            <p>The crew chasing freedom and the One Piece.</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/AssassinsCreedOrigins.jpg" alt="Bayek on Pyramid" width="200">
+          <figcaption>
+            <h3>Bayek of Siwa</h3>
+            <p>The beginning of the Assassin brotherhood.</p>
+          </figcaption>
+        </figure>
+      </section>
+    
+      <section class="gallery-row">
+        <figure>
+          <img src="assets/img/SantiagoBernabeu.jpg" alt="Santiago Bernabeu" width="200">
+          <figcaption>
+            <h3>Bernabeu Stadium</h3>
+            <p>Home of comebacks and football history.</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/BlackBeard.jpg" alt="Blackbeard Pirates" width="200">
+          <figcaption>
+            <h3>Blackbeard</h3>
+            <p>The chaos-bringer with two devil fruits.</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/ShadowoftheCollosus.png" alt="Shadow of the Colossus" width="200">
+          <figcaption>
+            <h3>Shadow of the Colossus</h3>
+            <p>A silent world of giants and mystery.</p>
+          </figcaption>
+        </figure>
+      </section>
     </section>
+    
+
 
     <!-- Blog Section -->
     <section id="blog">
       <h2>Blog</h2>
-      <table width="100%" border="0" cellspacing="10">
+      <table>
         <tr>
           <!-- Column 1: Real Madrid UCL Comeback Habit -->
           <td valign="top" width="33%">
@@ -93,11 +139,13 @@
       <!-- Contact Section -->
     <section id="contact">
       <h2>Contact Us</h2>
-      <p>If you have any questions or comments, feel free to reach out:</p>
+      <p>If you have any questions or comments, feel free to reach out</p>
       <address>
-      <p>Email: <a href="mailto:info@example.com">hackme@example.com</a></p>
-      <p>Phone: 011-235-81321</p>
-      <p>Address: 314159 Street Fighter, Gotham City, Los Santos</p>
+      <p></p>
+      <p>Email <a href="mailto:info@example.com">hackme@example.com</a></p>
+      <p>Telp 011-235-81321</p>
+      <p>314159 Street Fighter, Gotham City, Los Santos</p>
+      <p><b>VERGINO F MAINDOKA - 230211060074</b></p>
       </address>
     </section>
 
@@ -105,5 +153,16 @@
     <footer>
       <p>Made by Unsrat Student.</p>
     </footer>
+
+
+    <script>
+      function opensb() {
+        document.getElementById("sidebar").style.display = "block";
+      }
+       
+      function closesb() {
+        document.getElementById("sidebar").style.display = "none";
+      }
+      </script>
   </body>
 </html>
